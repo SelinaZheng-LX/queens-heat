@@ -193,3 +193,10 @@
     align-items: center;
     flex-direction: column;
 }
+.credits {
+    color: var(--black);
+    text-decoration: underline;
+    font-size: var(--text);
+    display: inline;
+    margin: 0;
+}
