@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Exo+2&display=swap");
+/* variables */
+:root {
+    /* colors */
+    --primary-bg: #c9c0ad;
+    --secondary-bg: #ebe5d8;
+    --primary-color: #63b389;
+    --secondary-color: #ffba4c;
+    --tert-color: #f07e53;
+    --quad-color: #878e91;
+    --white: #fff;
+    --black: #000;
+    /* font families */
+    --font-exo: "Exo 2", sans-serif;
+    --font-barlow: "Barlow", sans-serif;
+    /* font sizes */
+    --h1: xxx-large;
+    --h2: xx-large;
+    --h3: x-large;
+    --text: large;
+    --small-text: medium;
+    --mini-text: small;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/* entire body */
+section {
+    margin-top: 2vw;
+}
+/* scroll bar */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--quad-color);
+}
