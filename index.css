@@ -4,10 +4,18 @@
     min-height: 100%;
     overflow-x: hidden;
     margin: 0 auto;
+    background-color: var(--black);
+}
+.under-cover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-    position: relative;
+    position: absolute;
     right: 0;
     bottom: 0;
     min-width: 100%;
@@ -18,33 +26,108 @@
     overflow: hidden;
     display: block;
     height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    font-size: var(--h1);
+    font-family: var(--font-barlow);
+    text-transform: uppercase;
+    border-radius: 1rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    bottom: 18%;
+}
+.title-animated {
+    width: 50%;
+    margin-top: 15%;
+}
+.title-word {
+    animation: color-animation 4s linear infinite;
 }
 
+.title-word-1 {
+    --color-1: #df8453;
+    --color-2: #3d8dae;
+    --color-3: #e4a9a8;
+}
+
+.title-word-2 {
+    --color-1: #dbad4a;
+    --color-2: #accfcb;
+    --color-3: #17494d;
+}
+
+.title-word-3 {
+    --color-1: #accfcb;
+    --color-2: var(--primary-color);
+    --color-3: #accfcb;
+}
+
+.title-word-4 {
+    --color-1: #3d8dae;
+    --color-2: #df8453;
+    --color-3: var(--primary-color);
+}
+.title-word-5 {
+    --color-1: #df8453;
+    --color-2: #3d8dae;
+    --color-3: #accfcb;
+}
+
+@keyframes color-animation {
+    0% {
+        color: var(--color-1);
+    }
+    32% {
+        color: var(--color-1);
+    }
+    33% {
+        color: var(--color-2);
+    }
+    65% {
+        color: var(--color-2);
+    }
+    66% {
+        color: var(--color-3);
+    }
+    99% {
+        color: var(--color-3);
+    }
+    100% {
+        color: var(--color-1);
+    }
+}
+
+/* Here are just some visual styles. 🖌 */
+
+.container {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+}
 /* Add some content at the bottom of the video/page */
 .navbar {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    height: 9%;
-    padding: 1rem;
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-}
-li a {
-    display: flex;
-    justify-content: center;
-    color: var(--white);
-    padding: 0.7rem;
-    text-decoration: none;
-    font-size: var(--h3);
 }
 .navbar {
     padding: 1rem;
@@ -60,4 +143,53 @@ li a {
 .text span {
     height: 100rem;
     display: block;
+}
+/* template */
+#template {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+#template img {
+    width: 20%;
+}
+#template div {
+    width: 50%;
+    margin-left: 5%;
+}
+#template h1 {
+    color: var(--primary-color);
+    font-size: var(--h2);
+    font-family: var(--font-exo);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-group h1 {
+    font-size: var(--h1);
+}
+.text-group p {
+    font-family: var(--font-barlow);
+    font-size: var(--text);
+    color: var(--white);
+    margin-top: 0;
+    text-align: center;
+}
+/* footer */
+#footer {
+    margin-top: 3rem;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    background-color: var(--primary-color);
+    font-family: var(--font-barlow);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
